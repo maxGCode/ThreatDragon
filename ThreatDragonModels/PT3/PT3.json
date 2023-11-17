@@ -7,7 +7,14 @@
     "id": 0
   },
   "detail": {
-    "contributors": [],
+    "contributors": [
+      {
+        "name": "Ivan Volkov"
+      },
+      {
+        "name": "Max Gerdes"
+      }
+    ],
     "diagrams": [
       {
         "id": 1,
@@ -2125,7 +2132,7 @@
       }
     ],
     "diagramTop": 2,
-    "reviewer": "",
+    "reviewer": "Neugebauer, Hack",
     "threatTop": 17
   }
 }
