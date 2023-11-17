@@ -1599,8 +1599,8 @@
                 "text": "Verschlüsselungs-\nsoftware"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -1615,8 +1615,22 @@
               "outOfScope": false,
               "reasonOutOfScope": "",
               "privilegeLevel": "",
-              "hasOpenThreats": false,
-              "threats": [],
+              "hasOpenThreats": true,
+              "threats": [
+                {
+                  "id": "a69270d7-f3c0-4789-bf22-d05c188950b6",
+                  "title": "Kryptografischer Algorithmus wird mathematisch gelöst",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Information disclosure",
+                  "description": "Durch steigende Rechen-Leistung der Computer ",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 9,
+                  "score": ""
+                }
+              ],
               "isBidirectional": false,
               "protocol": "",
               "isEncrypted": false,
@@ -2044,6 +2058,6 @@
     ],
     "diagramTop": 2,
     "reviewer": "",
-    "threatTop": 8
+    "threatTop": 9
   }
 }
