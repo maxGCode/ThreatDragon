@@ -151,7 +151,7 @@
           },
           {
             "position": {
-              "x": 289,
+              "x": 283,
               "y": 110
             },
             "size": {
@@ -188,11 +188,11 @@
                   "severity": "High",
                   "type": "Denial of service",
                   "description": "Durch einen Distributed DOS angriff könnte der Login-Service der Website für \"normale\" Benutzer nicht mehr erreichbar ist.",
-                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "mitigation": "\n\nCAPEC-ID: 469",
                   "modelType": "Generic",
                   "new": false,
                   "number": 10,
-                  "score": ""
+                  "score": "49"
                 },
                 {
                   "id": "718db04b-7c09-4497-8785-370e0ac5dbf8",
@@ -200,12 +200,12 @@
                   "status": "Open",
                   "severity": "High",
                   "type": "Spoofing",
-                  "description": "Durch ein XSS-Angriff wird ein Session Cookie eines Authentifizierten Users geklaut.",
-                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "description": "Durch ein XSS-Angriff wird ein Session Cookie eines Authentifizierten Users geklaut.\n\nCAPEC-ID: 31\nMitre Attack: Steal Web Session Cookie",
+                  "mitigation": "",
                   "modelType": "Generic",
                   "new": false,
                   "number": 11,
-                  "score": ""
+                  "score": "33"
                 }
               ],
               "isBidirectional": false,
@@ -228,8 +228,8 @@
                 "text": "2FA-Auth\nService"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -244,8 +244,22 @@
               "outOfScope": false,
               "reasonOutOfScope": "",
               "privilegeLevel": "",
-              "hasOpenThreats": false,
-              "threats": []
+              "hasOpenThreats": true,
+              "threats": [
+                {
+                  "id": "412dc989-8177-4568-afc6-ccdd6f608706",
+                  "title": "Succesfull Auth-Challenge wird vorgetäuscht",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Tampering",
+                  "description": "\n\nCAPEC-ID: 272\nMittre Attack: Steal or Forge Authentication Certificates",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "Generic",
+                  "new": false,
+                  "number": 13,
+                  "score": "10"
+                }
+              ]
             }
           },
           {
@@ -294,12 +308,12 @@
                   "status": "Open",
                   "severity": "Medium",
                   "type": "Information disclosure",
-                  "description": "Ein Angreifer kann durch falsche Konfiguration der DB auf Daten zugreifen die nicht für diesen Nutzer bestimmt sind.",
+                  "description": "Ein Angreifer kann durch falsche Konfiguration der DB auf Daten zugreifen die nicht für diesen Nutzer bestimmt sind.\n\nCAPEC-ID: 410\nMitre Attack: Data from Local System",
                   "mitigation": "Provide remediation for this threat or a reason if status is N/A",
                   "modelType": "STRIDE",
                   "new": false,
                   "number": 4,
-                  "score": ""
+                  "score": "35"
                 },
                 {
                   "id": "446ff6b3-ac71-4f06-9e18-7f87275a0608",
@@ -307,12 +321,12 @@
                   "status": "Open",
                   "severity": "Low",
                   "type": "Tampering",
-                  "description": "Dadurch, dass die Session bei erfolgreicher Authentifizierung ein Jahr gültig ist, kann ein Angreifer versuchen sich über einen Authentifizierten Nutzer im System anzumelden. Der Angreifer könnte eine Dummy Telefonnummer eintragen, wodurch alle zukünftigen OTTs an seine Telefonnummer gehen.",
-                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "description": "Dadurch, dass die Session bei erfolgreicher Authentifizierung ein Jahr gültig ist, kann ein Angreifer versuchen sich über einen Authentifizierten Nutzer im System anzumelden. Der Angreifer könnte eine Dummy Telefonnummer eintragen, wodurch alle zukünftigen OTTs an seine Telefonnummer gehen.\n\nCAPEC-ID: 593\nMitre Attack: Steal Web Session Cookie",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A\n",
                   "modelType": "STRIDE",
                   "new": false,
                   "number": 5,
-                  "score": ""
+                  "score": "33"
                 }
               ],
               "isBidirectional": false,
@@ -1614,8 +1628,8 @@
           },
           {
             "position": {
-              "x": 784,
-              "y": 315.9999999999999
+              "x": 789,
+              "y": 296
             },
             "size": {
               "width": 130,
@@ -1650,12 +1664,12 @@
                   "status": "Open",
                   "severity": "Medium",
                   "type": "Information disclosure",
-                  "description": "Durch steigende Rechen-Leistung der Computer ",
+                  "description": "Durch steigende Rechen-Leistung der Computer \n\nCAPEC-ID: 217\nMittre Attack: Exploitation of Remote Services",
                   "mitigation": "Provide remediation for this threat or a reason if status is N/A",
                   "modelType": "STRIDE",
                   "new": false,
                   "number": 9,
-                  "score": ""
+                  "score": "13"
                 }
               ],
               "isBidirectional": false,
@@ -1832,8 +1846,8 @@
           },
           {
             "position": {
-              "x": 283,
-              "y": -90
+              "x": 289,
+              "y": -100
             },
             "size": {
               "width": 120,
@@ -1868,12 +1882,25 @@
                   "status": "Open",
                   "severity": "High",
                   "type": "Tampering",
-                  "description": "Ein Angreifer kann versuchen die Signatur der Email zu fälschen um sich als eine vertrauenswürdige Quelle von Emails zu verifizieren. Das könnte das Managment dazu verleiten auf Phishing Angriffe leichter hereinzufallen.",
-                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "description": "Ein Angreifer kann versuchen die Signatur der Email zu fälschen um sich als eine vertrauenswürdige Quelle von Emails zu verifizieren. Das könnte das Managment dazu verleiten auf Phishing Angriffe leichter hereinzufallen.\nCAPEC-ID: 163\nMitre Attack: Phishing\n",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A\n\n",
                   "modelType": "STRIDE",
                   "new": false,
                   "number": 1,
-                  "score": ""
+                  "score": "39"
+                },
+                {
+                  "id": "542921c6-f502-4a5d-91bb-c7299977e6ec",
+                  "title": "IT Reports werden verändert",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Repudiation",
+                  "description": "Durch uneingeschränkten Zugriff auf den IT-Security Report kann der Angreifer seine Identität verbergen und sich als ein anderer Angreifer ausgeben\n\nCAPEC-ID: 148\n\nMitre Attack: Stored Data Manipulation",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "Generic",
+                  "new": false,
+                  "number": 17,
+                  "score": "24"
                 }
               ],
               "isBidirectional": false,
@@ -1896,8 +1923,8 @@
                 "text": "Allsecure\nMobile Phone \nOTT Service"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -1912,8 +1939,22 @@
               "outOfScope": false,
               "reasonOutOfScope": "",
               "privilegeLevel": "",
-              "hasOpenThreats": false,
-              "threats": []
+              "hasOpenThreats": true,
+              "threats": [
+                {
+                  "id": "50cbccd8-9648-48c8-b9c5-b090932780ca",
+                  "title": "Falsche Konfiguration durch eigene Software",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Elevation of privilege",
+                  "description": "Durch mangelndes Fachwissen des Managers ist die eigene Software verwundbar durch offene/falsche Konfigurations Dateien.\n\nCAPEC-ID: 234\nMittre Attack: Token Access Manipulation",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "Generic",
+                  "new": false,
+                  "number": 15,
+                  "score": "35.5"
+                }
+              ]
             }
           },
           {
@@ -1954,12 +1995,12 @@
                   "status": "Open",
                   "severity": "High",
                   "type": "Tampering",
-                  "description": "Ein Angreifer kann versuchen die Log Dateien so zu verändern, dass ein Angriff auf das System nicht als solcher erkannt wird.",
+                  "description": "Ein Angreifer kann versuchen die Log Dateien so zu verändern, dass ein Angriff auf das System nicht als solcher erkannt wird.\n\nCAPEC-ID: 268\nMittre Attack: Stored Data Manipulation",
                   "mitigation": "Provide remediation for this threat or a reason if status is N/A",
                   "modelType": "STRIDE",
                   "new": false,
                   "number": 8,
-                  "score": ""
+                  "score": "27"
                 }
               ],
               "isBidirectional": false,
@@ -2085,6 +2126,6 @@
     ],
     "diagramTop": 2,
     "reviewer": "",
-    "threatTop": 11
+    "threatTop": 17
   }
 }
