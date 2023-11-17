@@ -2,7 +2,7 @@
   "version": "2.0.9",
   "summary": {
     "title": "PT3",
-    "owner": "",
+    "owner": "Ivan Volkov, Max Gerdes",
     "description": "",
     "id": 0
   },
@@ -187,8 +187,8 @@
                   "status": "Open",
                   "severity": "High",
                   "type": "Denial of service",
-                  "description": "Durch einen Distributed DOS angriff könnte der Login-Service der Website für \"normale\" Benutzer nicht mehr erreichbar ist.\nMitre Attack: Network Denial of Service\nCAPEC-ID: 469",
-                  "mitigation": "Mitre Defend: D3-NTF\n\nLast  Verteilung der Anfragen durch einen externen Anbieter.",
+                  "description": "Durch einen Distributed DOS angriff könnte der Login-Service der Website für \"normale\" Benutzer nicht mehr erreichbar ist.",
+                  "mitigation": "\n\nCAPEC-ID: 469",
                   "modelType": "Generic",
                   "new": false,
                   "number": 10,
@@ -201,7 +201,7 @@
                   "severity": "High",
                   "type": "Spoofing",
                   "description": "Durch ein XSS-Angriff wird ein Session Cookie eines Authentifizierten Users geklaut.\n\nCAPEC-ID: 31\nMitre Attack: Steal Web Session Cookie",
-                  "mitigation": "Mitre Defend: Authentication Cache Invalidation\n\nRemove Session nach dem der User den Browser schließt.",
+                  "mitigation": "",
                   "modelType": "Generic",
                   "new": false,
                   "number": 11,
@@ -253,7 +253,7 @@
                   "severity": "Medium",
                   "type": "Tampering",
                   "description": "\n\nCAPEC-ID: 272\nMittre Attack: Steal or Forge Authentication Certificates",
-                  "mitigation": "Mitre Defend: D3-TAAN\n\nEs wird sichergestellt das nur Prozesse aus dem eigenen Vertrauenszone diesen Prozess anstoßen dürfen.",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
                   "modelType": "Generic",
                   "new": false,
                   "number": 13,
@@ -309,7 +309,7 @@
                   "severity": "Medium",
                   "type": "Information disclosure",
                   "description": "Ein Angreifer kann durch falsche Konfiguration der DB auf Daten zugreifen die nicht für diesen Nutzer bestimmt sind.\n\nCAPEC-ID: 410\nMitre Attack: Data from Local System",
-                  "mitigation": "Mitre Defend: File encryption\n\nDie Datenbank wird komplett verschlüsselt mit einen Asymmetrischen Algorithmus",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
                   "modelType": "STRIDE",
                   "new": false,
                   "number": 4,
@@ -322,7 +322,7 @@
                   "severity": "Low",
                   "type": "Tampering",
                   "description": "Dadurch, dass die Session bei erfolgreicher Authentifizierung ein Jahr gültig ist, kann ein Angreifer versuchen sich über einen Authentifizierten Nutzer im System anzumelden. Der Angreifer könnte eine Dummy Telefonnummer eintragen, wodurch alle zukünftigen OTTs an seine Telefonnummer gehen.\n\nCAPEC-ID: 593\nMitre Attack: Steal Web Session Cookie",
-                  "mitigation": "Mitre Defend: Authentication Cache Invalidation\n\nRemove Session nach dem der User den Browser schließt.",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A\n",
                   "modelType": "STRIDE",
                   "new": false,
                   "number": 5,
@@ -1665,7 +1665,7 @@
                   "severity": "Medium",
                   "type": "Information disclosure",
                   "description": "Durch steigende Rechen-Leistung der Computer \n\nCAPEC-ID: 217\nMittre Attack: Exploitation of Remote Services",
-                  "mitigation": "Mitre Defend: D3-ETF\n\nAuf post-quanten Algorithmen für die Verschlüsselung zurückgreifen.",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
                   "modelType": "STRIDE",
                   "new": false,
                   "number": 9,
@@ -1883,7 +1883,7 @@
                   "severity": "High",
                   "type": "Tampering",
                   "description": "Ein Angreifer kann versuchen die Signatur der Email zu fälschen um sich als eine vertrauenswürdige Quelle von Emails zu verifizieren. Das könnte das Managment dazu verleiten auf Phishing Angriffe leichter hereinzufallen.\nCAPEC-ID: 163\nMitre Attack: Phishing\n",
-                  "mitigation": "Signaturen über einen externen Anbieter verifizieren.\n\nMitre Defend: D3-MAN",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A\n\n",
                   "modelType": "STRIDE",
                   "new": false,
                   "number": 1,
@@ -1895,8 +1895,8 @@
                   "status": "Open",
                   "severity": "Medium",
                   "type": "Repudiation",
-                  "description": "Durch uneingeschränkten Zugriff auf den IT-Security Report kann der Angreifer seine Identität verbergen und sich als ein anderer Angreifer ausgeben\n\nCAPEC-ID: 148\nMitre Attack: Stored Data Manipulation",
-                  "mitigation": "Man kann hashwerte über bestimmte die Reports machen um eine Veränderung der Datei zu erkennen\n\nMitre Defend: D3-FH",
+                  "description": "Durch uneingeschränkten Zugriff auf den IT-Security Report kann der Angreifer seine Identität verbergen und sich als ein anderer Angreifer ausgeben\n\nCAPEC-ID: 148\n\nMitre Attack: Stored Data Manipulation",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
                   "modelType": "Generic",
                   "new": false,
                   "number": 17,
@@ -1911,7 +1911,7 @@
           },
           {
             "position": {
-              "x": 351,
+              "x": 359,
               "y": 315.9999999999999
             },
             "size": {
@@ -1948,7 +1948,7 @@
                   "severity": "Medium",
                   "type": "Elevation of privilege",
                   "description": "Durch mangelndes Fachwissen des Managers ist die eigene Software verwundbar durch offene/falsche Konfigurations Dateien.\n\nCAPEC-ID: 234\nMittre Attack: Token Access Manipulation",
-                  "mitigation": "Mitre Defend: D3-ACH\n\nApplikation Konifiguration anpassen.",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
                   "modelType": "Generic",
                   "new": false,
                   "number": 15,
@@ -1960,7 +1960,7 @@
           {
             "position": {
               "x": 609,
-              "y": 140.9999999999999
+              "y": 146.0000000000001
             },
             "size": {
               "width": 220,
@@ -1996,7 +1996,7 @@
                   "severity": "High",
                   "type": "Tampering",
                   "description": "Ein Angreifer kann versuchen die Log Dateien so zu verändern, dass ein Angriff auf das System nicht als solcher erkannt wird.\n\nCAPEC-ID: 268\nMittre Attack: Stored Data Manipulation",
-                  "mitigation": "Mitre Defend: D3-LFP\n\nNur Prozesse aus der Lokalen Vertrauenszone dürfen diesen Dateien ändern.",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
                   "modelType": "STRIDE",
                   "new": false,
                   "number": 8,
