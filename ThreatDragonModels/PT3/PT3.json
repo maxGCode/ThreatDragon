@@ -151,8 +151,8 @@
           },
           {
             "position": {
-              "x": 264,
-              "y": 120.00000000000011
+              "x": 289,
+              "y": 110
             },
             "size": {
               "width": 130,
@@ -163,8 +163,8 @@
                 "text": "Login System -\nWebapp +\nMobileapp"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -179,8 +179,35 @@
               "outOfScope": false,
               "reasonOutOfScope": "",
               "privilegeLevel": "",
-              "hasOpenThreats": false,
-              "threats": [],
+              "hasOpenThreats": true,
+              "threats": [
+                {
+                  "id": "1efd584f-3012-4008-ad34-34e7e733f627",
+                  "title": "Zuviele Requests an den Login-Server",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Denial of service",
+                  "description": "Durch einen Distributed DOS angriff könnte der Login-Service der Website für \"normale\" Benutzer nicht mehr erreichbar ist.",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "Generic",
+                  "new": false,
+                  "number": 10,
+                  "score": ""
+                },
+                {
+                  "id": "718db04b-7c09-4497-8785-370e0ac5dbf8",
+                  "title": "Authentifizierte Session wird geklaut",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Spoofing",
+                  "description": "Durch ein XSS-Angriff wird ein Session Cookie eines Authentifizierten Users geklaut.",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "Generic",
+                  "new": false,
+                  "number": 11,
+                  "score": ""
+                }
+              ],
               "isBidirectional": false,
               "protocol": "",
               "isEncrypted": false,
@@ -1050,15 +1077,15 @@
               "threats": []
             },
             "id": "71c41f27-4b15-4df3-ab2b-acfac767e896",
+            "labels": [
+              "Email(RAW-Daten in Excel)\nSigniert"
+            ],
             "source": {
               "cell": "ac8a72c7-b7ca-4cfc-bc45-af432368467b"
             },
             "target": {
               "cell": "5ad0ef5f-9b89-4ddd-99c1-164a87c8b7f1"
-            },
-            "labels": [
-              "Email(RAW-Daten in Excel)\nSigniert"
-            ]
+            }
           },
           {
             "shape": "flow",
@@ -1092,15 +1119,15 @@
               "threats": []
             },
             "id": "3c23d901-cea3-4ee1-909c-6a7f127a352e",
+            "labels": [
+              "Log-Daten"
+            ],
             "source": {
               "cell": "6d1187c3-43a6-427b-b59f-a4ea956cbc17"
             },
             "target": {
               "cell": "ac8a72c7-b7ca-4cfc-bc45-af432368467b"
-            },
-            "labels": [
-              "Log-Daten"
-            ]
+            }
           },
           {
             "shape": "flow",
@@ -1134,15 +1161,15 @@
               "threats": []
             },
             "id": "720c23d4-be06-4104-8979-41177d882cbc",
+            "labels": [
+              "Log(Email,OTT,PhoneNo)"
+            ],
             "source": {
               "cell": "fb8aca7f-d2b0-41ba-b16b-180e389f9257"
             },
             "target": {
               "cell": "6d1187c3-43a6-427b-b59f-a4ea956cbc17"
-            },
-            "labels": [
-              "Log(Email,OTT,PhoneNo)"
-            ]
+            }
           },
           {
             "shape": "flow",
@@ -1218,6 +1245,9 @@
               "threats": []
             },
             "id": "b3031fa1-6c81-4082-ae0f-b068d5523b85",
+            "labels": [
+              ""
+            ],
             "source": {
               "cell": "7935e1b4-c85b-45e1-adbc-b4821dd922c8"
             },
@@ -1233,9 +1263,6 @@
                 "x": 370,
                 "y": 350
               }
-            ],
-            "labels": [
-              ""
             ]
           },
           {
@@ -1509,6 +1536,9 @@
               "threats": []
             },
             "id": "b2be2a83-ade2-469f-b096-27542c420378",
+            "labels": [
+              "Verschlüsselter Report"
+            ],
             "source": {
               "cell": "9040accd-94a3-4003-a22d-81e41245463b"
             },
@@ -1532,9 +1562,6 @@
                 "x": 490,
                 "y": -80
               }
-            ],
-            "labels": [
-              "Verschlüsselter Report"
             ]
           },
           {
@@ -1569,6 +1596,9 @@
               "threats": []
             },
             "id": "42f62690-b809-4893-ba58-2bf31f2b6c66",
+            "labels": [
+              "Verschlüsselt & Signierter Report"
+            ],
             "source": {
               "cell": "ac8a72c7-b7ca-4cfc-bc45-af432368467b"
             },
@@ -1580,9 +1610,6 @@
                 "x": 430,
                 "y": -280
               }
-            ],
-            "labels": [
-              "Verschlüsselt & Signierter Report"
             ]
           },
           {
@@ -1786,8 +1813,8 @@
             },
             "visible": true,
             "shape": "actor",
-            "id": "5ad0ef5f-9b89-4ddd-99c1-164a87c8b7f1",
             "zIndex": 18,
+            "id": "5ad0ef5f-9b89-4ddd-99c1-164a87c8b7f1",
             "data": {
               "type": "tm.Flow",
               "name": "Managment",
@@ -1824,8 +1851,8 @@
             },
             "visible": true,
             "shape": "process",
-            "id": "ac8a72c7-b7ca-4cfc-bc45-af432368467b",
             "zIndex": 19,
+            "id": "ac8a72c7-b7ca-4cfc-bc45-af432368467b",
             "data": {
               "type": "tm.Flow",
               "name": "Email und Signatur\nService",
@@ -1876,8 +1903,8 @@
             },
             "visible": true,
             "shape": "process",
-            "id": "7935e1b4-c85b-45e1-adbc-b4821dd922c8",
             "zIndex": 20,
+            "id": "7935e1b4-c85b-45e1-adbc-b4821dd922c8",
             "data": {
               "type": "tm.Process",
               "name": "Allsecure\nMobile Phone \nOTT Service",
@@ -1910,8 +1937,8 @@
             },
             "visible": true,
             "shape": "process",
-            "id": "4e93a82e-7ac1-4bbb-8b22-671e9692d037",
             "zIndex": 21,
+            "id": "4e93a82e-7ac1-4bbb-8b22-671e9692d037",
             "data": {
               "type": "tm.Flow",
               "name": "SIEM",
@@ -1957,8 +1984,8 @@
             },
             "visible": true,
             "shape": "td-text-block",
-            "id": "5fee5b81-0833-4f28-9e86-a8eb2da140b6",
             "zIndex": 22,
+            "id": "5fee5b81-0833-4f28-9e86-a8eb2da140b6",
             "data": {
               "type": "tm.Flow",
               "name": "AccesLog/Errorlog\nStatus Monitoring",
@@ -1989,13 +2016,13 @@
             },
             "visible": true,
             "shape": "td-text-block",
+            "zIndex": 23,
             "id": "442681c2-5fc6-4cb2-b589-2ed678841928",
             "data": {
               "type": "tm.Text",
               "name": "AccesLog/Errorlog\nStatus Monitoring",
               "hasOpenThreats": false
-            },
-            "zIndex": 23
+            }
           },
           {
             "position": {
@@ -2013,8 +2040,8 @@
             },
             "visible": true,
             "shape": "td-text-block",
-            "id": "8196dfae-5ff5-49b6-93ab-de11815253e4",
             "zIndex": 24,
+            "id": "8196dfae-5ff5-49b6-93ab-de11815253e4",
             "data": {
               "type": "tm.Flow",
               "name": "Data Flow",
@@ -2045,8 +2072,8 @@
             },
             "visible": true,
             "shape": "td-text-block",
-            "id": "0749f23e-e209-4feb-891a-309e523fa655",
             "zIndex": 25,
+            "id": "0749f23e-e209-4feb-891a-309e523fa655",
             "data": {
               "type": "tm.Text",
               "name": "OTT",
@@ -2058,6 +2085,6 @@
     ],
     "diagramTop": 2,
     "reviewer": "",
-    "threatTop": 9
+    "threatTop": 11
   }
 }
