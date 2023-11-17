@@ -52,11 +52,11 @@
           {
             "position": {
               "x": 1200,
-              "y": -149.9999999999999
+              "y": -39
             },
             "size": {
               "width": 580,
-              "height": 650
+              "height": 560
             },
             "shape": "trust-boundary-box",
             "attrs": {
@@ -223,8 +223,8 @@
           },
           {
             "position": {
-              "x": 749,
-              "y": -99
+              "x": 794,
+              "y": -119
             },
             "size": {
               "width": 120,
@@ -235,11 +235,13 @@
                 "text": "Log-DB"
               },
               "topLine": {
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               },
               "bottomLine": {
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -249,7 +251,7 @@
             "id": "6d1187c3-43a6-427b-b59f-a4ea956cbc17",
             "data": {
               "type": "tm.Flow",
-              "name": "Data Flow",
+              "name": "Log-DB",
               "description": "",
               "outOfScope": false,
               "reasonOutOfScope": "",
@@ -257,8 +259,35 @@
               "storesCredentials": false,
               "isEncrypted": false,
               "isSigned": false,
-              "hasOpenThreats": false,
-              "threats": [],
+              "hasOpenThreats": true,
+              "threats": [
+                {
+                  "id": "1b58fea5-0e55-4f5d-93b8-8f7e6e4cef5a",
+                  "title": "Unbefugter Lesezugriff auf die Datenbank",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Information disclosure",
+                  "description": "Ein Angreifer kann durch falsche Konfiguration der DB auf Daten zugreifen die nicht für diesen Nutzer bestimmt sind.",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 4,
+                  "score": ""
+                },
+                {
+                  "id": "446ff6b3-ac71-4f06-9e18-7f87275a0608",
+                  "title": "Session Diebstahl",
+                  "status": "Open",
+                  "severity": "Low",
+                  "type": "Tampering",
+                  "description": "Dadurch, dass die Session bei erfolgreicher Authentifizierung ein Jahr gültig ist, kann ein Angreifer versuchen sich über einen Authentifizierten Nutzer im System anzumelden. Der Angreifer könnte eine Dummy Telefonnummer eintragen, wodurch alle zukünftigen OTTs an seine Telefonnummer gehen.",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 5,
+                  "score": ""
+                }
+              ],
               "isBidirectional": false,
               "protocol": "",
               "isPublicNetwork": false
@@ -630,7 +659,7 @@
             },
             "vertices": [
               {
-                "x": 463,
+                "x": 430,
                 "y": 825
               }
             ]
@@ -1449,6 +1478,114 @@
             ]
           },
           {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Verschlüsselter Report",
+              "description": "",
+              "outOfScope": false,
+              "isBidirectional": false,
+              "reasonOutOfScope": "",
+              "protocol": "",
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "hasOpenThreats": false,
+              "threats": []
+            },
+            "id": "b2be2a83-ade2-469f-b096-27542c420378",
+            "source": {
+              "cell": "9040accd-94a3-4003-a22d-81e41245463b"
+            },
+            "target": {
+              "cell": "ac8a72c7-b7ca-4cfc-bc45-af432368467b"
+            },
+            "vertices": [
+              {
+                "x": 920,
+                "y": 130
+              },
+              {
+                "x": 920,
+                "y": -160
+              },
+              {
+                "x": 700,
+                "y": -100
+              },
+              {
+                "x": 490,
+                "y": -80
+              }
+            ],
+            "labels": [
+              "Verschlüsselter Report"
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Verschlüsselt & Signierter Report",
+              "description": "",
+              "outOfScope": false,
+              "isBidirectional": false,
+              "reasonOutOfScope": "",
+              "protocol": "",
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "hasOpenThreats": false,
+              "threats": []
+            },
+            "id": "42f62690-b809-4893-ba58-2bf31f2b6c66",
+            "source": {
+              "cell": "ac8a72c7-b7ca-4cfc-bc45-af432368467b"
+            },
+            "target": {
+              "cell": "5ad0ef5f-9b89-4ddd-99c1-164a87c8b7f1"
+            },
+            "vertices": [
+              {
+                "x": 430,
+                "y": -280
+              }
+            ],
+            "labels": [
+              "Verschlüsselt & Signierter Report"
+            ]
+          },
+          {
             "position": {
               "x": 784,
               "y": 315.9999999999999
@@ -1616,8 +1753,8 @@
           },
           {
             "position": {
-              "x": 370,
-              "y": -350
+              "x": 151.5,
+              "y": -360
             },
             "size": {
               "width": 112.5,
@@ -1666,8 +1803,8 @@
                 "text": "Email und Signatur\nService"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -1682,8 +1819,22 @@
               "outOfScope": false,
               "reasonOutOfScope": "",
               "privilegeLevel": "",
-              "hasOpenThreats": false,
-              "threats": [],
+              "hasOpenThreats": true,
+              "threats": [
+                {
+                  "id": "60ae36de-5363-4de3-a53a-cda15e0364d8",
+                  "title": "Signatur Spoofing",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Tampering",
+                  "description": "Ein Angreifer kann versuchen die Signatur der Email zu fälschen um sich als eine vertrauenswürdige Quelle von Emails zu verifizieren. Das könnte das Managment dazu verleiten auf Phishing Angriffe leichter hereinzufallen.",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 1,
+                  "score": ""
+                }
+              ],
               "isBidirectional": false,
               "protocol": "",
               "isEncrypted": false,
@@ -1738,8 +1889,8 @@
                 "text": "SIEM"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -1754,8 +1905,22 @@
               "outOfScope": false,
               "reasonOutOfScope": "",
               "privilegeLevel": "",
-              "hasOpenThreats": false,
-              "threats": [],
+              "hasOpenThreats": true,
+              "threats": [
+                {
+                  "id": "5e53e976-fbfd-4818-9171-5c366f9e5846",
+                  "title": "Änderungen von Log Daten",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Tampering",
+                  "description": "Ein Angreifer kann versuchen die Log Dateien so zu verändern, dass ein Angriff auf das System nicht als solcher erkannt wird.",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 8,
+                  "score": ""
+                }
+              ],
               "isBidirectional": false,
               "protocol": "",
               "isEncrypted": false,
@@ -1765,7 +1930,7 @@
           {
             "position": {
               "x": 533,
-              "y": 100
+              "y": 80.99999999999989
             },
             "size": {
               "width": 112.5,
@@ -1781,9 +1946,17 @@
             "id": "5fee5b81-0833-4f28-9e86-a8eb2da140b6",
             "zIndex": 22,
             "data": {
-              "type": "tm.Text",
+              "type": "tm.Flow",
               "name": "AccesLog/Errorlog\nStatus Monitoring",
-              "hasOpenThreats": false
+              "hasOpenThreats": false,
+              "description": "",
+              "outOfScope": false,
+              "isBidirectional": false,
+              "reasonOutOfScope": "",
+              "protocol": "",
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "threats": []
             }
           },
           {
@@ -1841,12 +2014,36 @@
               "isPublicNetwork": false,
               "threats": []
             }
+          },
+          {
+            "position": {
+              "x": 330,
+              "y": 256.0000000000001
+            },
+            "size": {
+              "width": 112.5,
+              "height": 60
+            },
+            "attrs": {
+              "text": {
+                "text": "OTT"
+              }
+            },
+            "visible": true,
+            "shape": "td-text-block",
+            "id": "0749f23e-e209-4feb-891a-309e523fa655",
+            "zIndex": 25,
+            "data": {
+              "type": "tm.Text",
+              "name": "OTT",
+              "hasOpenThreats": false
+            }
           }
         ]
       }
     ],
     "diagramTop": 2,
     "reviewer": "",
-    "threatTop": 0
+    "threatTop": 8
   }
 }
